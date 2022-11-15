@@ -6,6 +6,11 @@ $(window).scroll(function() {
         $('.site-header').removeClass("sticky-header");
     }
 });
+/*----------Menu Toggle----------*/
+ $(".menu-toggle").click(function() {
+        $(this).toggleClass("on");
+        $(".navbar").slideToggle();
+    });
 /*-----------Responsive-Tab-------------*/
 $(document).ready(function() {
     $('#responsiveTabsDemo').responsiveTabs({
