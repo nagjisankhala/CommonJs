@@ -32,19 +32,7 @@ $('.top').click(function() {
 /*----------- Accordian-------------*/
 $(".about__vision h2").click(function() {
     $(this).next().slideToggle();
-});
-$(function() {
-    var title = $(".accordian__title");
-    title
-        .on("click", function() {
-            var ThisIt = $(this);
-            $(".accordian__title").not(ThisIt).removeClass("active");
-            $(this).toggleClass("active");
-            $(".accordian__text").not(ThisIt.next(".accordian__text")).slideUp(400);
-            ThisIt.next(".accordian__text").slideToggle(400);
-        })
-        .eq(0)
-        .click();
+     $(this).toggleClass('active');
 });
 /*-------Number-count--------*/
 $('.count').each(function() {
