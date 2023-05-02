@@ -34,6 +34,19 @@ $(".about__vision h2").click(function() {
     $(this).next().slideToggle();
      $(this).toggleClass('active');
 });
+
+$(".accordian__block h6").click(function() {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass('active')
+            $(this).next().slideUp();
+        } else {
+            $('.accordian__content').slideUp();
+            $('.accordian__block h6').removeClass('active');
+            $(this).siblings('.accordian__content').slideToggle();
+            $(this).toggleClass('active');
+        }
+        return false;
+    });
 /*-------Number-count--------*/
 $('.count').each(function() {
     $(this).prop('Counter', 0).animate({
