@@ -47,6 +47,20 @@ $(".accordian__block h6").click(function() {
         }
         return false;
     });
+
+$(function() {
+            var title = $(".checkout_accordian-icon");
+            title
+                .on("click", function() {
+                var ThisIt = $(this);
+                    $(".checkout_accordian-icon").not(ThisIt).removeClass("checkout-active");
+                    $(this).toggleClass("checkout-active");
+                    $(".checkout_accordian").not(ThisIt.next(".checkout_accordian")).slideUp(400);
+                    ThisIt.next(".checkout_accordian").slideToggle(400);
+                })
+                .eq(0)
+                .click();
+            });
 /*-------Number-count--------*/
 $('.count').each(function() {
     $(this).prop('Counter', 0).animate({
