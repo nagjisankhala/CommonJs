@@ -11,6 +11,16 @@ $(window).scroll(function() {
         $(this).toggleClass("on");
         $(".navbar").slideToggle();
     });
+/*-----------Submenu--------------*/
+$(".navbar ul li a").click(function() {
+                if (($(this).next()).is(':visible')) {
+                    $(this).next().slideUp();
+                } else {
+                    $('.sub-menu').slideUp();
+                    $(this).next().slideDown();
+                }
+                return false;
+            })
 /*-----------Responsive-Tab-------------*/
 $(document).ready(function() {
     $('#responsiveTabsDemo').responsiveTabs({
