@@ -21,6 +21,15 @@ $(".navbar ul li a").click(function() {
     }
     return false;
 })
+
+    $(".DropDown").click(function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).children().next('.sub-menu').slideDown();
+        } else {
+            $(this).children().next('.sub-menu').slideUp();
+        }
+    })
 /*-----------Responsive-Tab-------------*/
 $(document).ready(function() {
     $('#responsiveTabsDemo').responsiveTabs({
