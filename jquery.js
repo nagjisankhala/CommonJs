@@ -30,6 +30,12 @@ $(".navbar ul li a").click(function() {
             $(this).children().next('.sub-menu').slideUp();
         }
     })
+$(".DropDown").click(function() {
+                if ($(window).width() < 1025) {
+                    $('.sub-menu').not($(this).children()).slideUp('active');
+                    $(this).children(".sub-menu").slideToggle();
+                }
+            });
 /*-----------Responsive-Tab-------------*/
 $(document).ready(function() {
     $('#responsiveTabsDemo').responsiveTabs({
