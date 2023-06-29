@@ -11,6 +11,10 @@ $(window).scroll(function() {
         $(this).toggleClass("on");
         $(".navbar").slideToggle();
     });
+ $(".menu-toggle").click(function() {
+                    $('.mobile-menu').toggleClass('active');
+                    $('.overlay').toggleClass('its-active');
+                });
 /*-----------Submenu--------------*/
 $(".navbar ul li a").click(function() {
     if (($(this).next()).is(':visible')) {
