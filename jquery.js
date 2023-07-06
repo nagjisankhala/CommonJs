@@ -40,6 +40,14 @@ $(".DropDown").click(function() {
         $(this).children(".sub-menu").slideToggle();
     }
 });
+$(".drop_down").click(function() {
+        $(".drop_down").removeClass("active");
+        $(".sub_menu").slideUp();
+        if (!$(this).next().is(":visible")) {
+            $(this).next().slideDown();
+            $(this).addClass("active");
+        }
+    })
 /*-------Scroll to top----------*/
 $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
