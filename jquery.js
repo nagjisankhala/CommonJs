@@ -104,3 +104,16 @@ $(window).on('scroll', function() {
     var perc = 100 * scrollPos / (docHeight - winHeight)
     $('#indicator').width(perc + '%')
 })
+/*------------Responsive-Tab------------*/
+  $(function() {
+        var tabContainers = $('.tab_content > .tab_info');
+
+        $('.tab-nav ul li a').click(function() {
+            tabContainers.hide().filter(this.hash).show();
+
+            $('.tab-nav ul li a').removeClass('active');
+            $(this).addClass('active');
+
+            return false;
+        })
+    });
