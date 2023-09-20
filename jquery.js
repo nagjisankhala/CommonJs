@@ -125,3 +125,12 @@ $(window).on('scroll', function() {
             return false;
         })
     });
+
+ // Smooth Scroll
+    $('.navbar ul li a').on('click', function(e) {
+        var href = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(href).offset().top
+        }, '100');
+        e.preventDefault();
+    });
