@@ -15,6 +15,15 @@ $(window).scroll(function() {
                     $('.mobile-menu').toggleClass('active');
                     $('.overlay').toggleClass('its-active');
                 });
+$(document).ready(function() {
+    $(".menu-toggle").click(function() {
+        $(".header-nav").toggleClass("open");
+    });
+
+    $(".close-menu").click(function() {
+        $(".header-nav").removeClass("open");
+    });
+});
 /*-----------Submenu--------------*/
 $(".navbar ul li a").click(function() {
     if (($(this).next()).is(':visible')) {
