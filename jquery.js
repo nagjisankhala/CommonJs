@@ -6,15 +6,13 @@ $(window).scroll(function() {
         $('.site-header').removeClass("sticky-header");
     }
 });
+
 /*----------Menu Toggle----------*/
  $(".menu-toggle").click(function() {
-        $(this).toggleClass("on");
-        $(".navbar").slideToggle();
-    });
- $(".menu-toggle").click(function() {
-                    $('.mobile-menu').toggleClass('active');
-                    $('.overlay').toggleClass('its-active');
-                });
+    $(this).toggleClass("on");
+    $(".navbar").slideToggle();
+});
+
 $(document).ready(function() {
     $(".menu-toggle").click(function() {
         $(".header-nav").toggleClass("open");
