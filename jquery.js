@@ -13,15 +13,6 @@ $(window).scroll(function() {
     $(".navbar").slideToggle();
 });
 
-$(document).ready(function() {
-    $(".menu-toggle").click(function() {
-        $(".header-nav").toggleClass("open");
-    });
-
-    $(".close-menu").click(function() {
-        $(".header-nav").removeClass("open");
-    });
-});
 /*-----------Submenu--------------*/
 $(".navbar ul li a").click(function() {
     if (($(this).next()).is(':visible')) {
@@ -55,6 +46,7 @@ $(".drop_down").click(function() {
             $(this).addClass("active");
         }
     })
+
 /*-------Scroll to top----------*/
 $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
@@ -67,7 +59,9 @@ $('.top').click(function() {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
 });
+
 /*----------- Accordian-------------*/
+
 $(".about__vision h2").click(function() {
     $(this).next().slideToggle();
      $(this).toggleClass('active');
@@ -99,18 +93,7 @@ $(function() {
         .eq(0)
         .click();
     });
-/*-------Number-count--------*/
-$('.count').each(function() {
-    $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function(now) {
-            $(this).text(Math.ceil(now));
-        }
-    });
-});
+
 /*---------indicator---------*/
 $(window).on('scroll', function() {
     var scrollPos = $(window).scrollTop()
@@ -119,6 +102,7 @@ $(window).on('scroll', function() {
     var perc = 100 * scrollPos / (docHeight - winHeight)
     $('#indicator').width(perc + '%')
 })
+
 /*------------Responsive-Tab------------*/
   $(function() {
         var tabContainers = $('.tab_content > .tab_info');
