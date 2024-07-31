@@ -12,6 +12,20 @@ $(window).scroll(function() {
     $(this).toggleClass("on");
     $(".navbar").slideToggle();
 });
+ $(".menu-toggle").click(function() {
+        $(".header-menu").toggleClass("active");
+        $(".overlay").toggleClass("active");
+    });
+    $(".menu-close").click(function() {
+        $(".header-menu").toggleClass("active");
+        $(".overlay").toggleClass("active");
+    });
+    $(document).on("click", function(event) {
+        if (!$(event.target).closest(".header-menu").length && !$(event.target).closest(".menu-toggle").length) {
+            $(".header-menu").removeClass("active");
+            $(".overlay").removeClass("active");
+        }
+    });
 
 /*-----------Submenu--------------*/
 $(".navbar ul li a").click(function() {
